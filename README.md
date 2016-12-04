@@ -14,4 +14,6 @@ This app will allow a user to browse a google map and view scenery from the rele
 
 ## Screenshots
 (upload an image of your layout to this repo then link to it here)
+
+
 ![image](http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg)
