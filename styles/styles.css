@@ -89,6 +89,14 @@ span.amp {
 
 }
 
+.collapsible {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin: 0.5rem 0 1rem 0;
+ }
+
 /*
 .imgcont1 {
 	vertical-align: top;
@@ -102,7 +110,7 @@ span.amp {
 }
 */
 
-.firstcontent {
+/*.firstcontent {
 	width: 450px;
 	height: 300px;
 	padding: 50px;
@@ -112,11 +120,4 @@ span.amp {
 	text-align: justify;
 	color: #ffffff;
 }
-
-.title1 {
-	color: #ffffff;
-	font-family: merriweather;
-	font-size: 40px;
-	text-align: center;
-	font-style: italic;
-}
+*/
