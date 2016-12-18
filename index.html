@@ -19,56 +19,81 @@
 </head>
 
 <body>
+
 	<!-- js, jquery & materialize -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="javascript/materialize.js"></script>
 		<script type="text/javascript" src="javascript/main.js"></script>
 
+<div class="container">
 
-		<header class="clearfix topnav">
+		<header class="row clearfix topnav">
 	<!-- 	<i class="material-icons menuicon">menu</i> -->
 	
-		<span class="navlink"><a href="#" alt="URL">HOME</a></span>
-		<span class="navlink"><a href="#" alt="URL">ABOUT</a></span>
+		<span class="navlink"><a href="index.html" alt="URL">HOME</a></span>
+		<span class="navlink"><a href="about.html" alt="URL">ABOUT</a></span>
 		<span class="navlink"><a href="#" alt="URL">GEOGRAPHY</a></span>
 		<span class="navlink"><a href="#" alt="URL">RESOURCES</a></span>
 
 		</header>
 
 
-	<div class="fall">
+<!-- 	<div class="fall">
 		<span class="amp">&amp;</span>
-	</div>
+	</div> -->
 
-<!-- NOTE: need to add container and split + float winter left and right - list will go to right float area -->
+<!-- NOTE: need to add container and split + float winter left and right - list will go to right float area
 
-	<div class="winter">
-		<span class="titleone">hik(e)r. [n]</span>
-		
-		<p>a person who walks or marches a great distance for pleasure, exercise, or the like.</p> 
+make this shit responsive bc it's not flowing upon resize 
 
-		<hr>
+container below -->
 
-		<ul class="collapsible" data-collapsible="accordion">
+	<div class="row">
+		<div class="winter col s4 m4">
+			<span class="titleone">hik(e)r. [n]</span>
+			
+			<p>a person who walks or marches a great distance for pleasure, exercise, or the like.</p> 
 
-    	<li>
-      	<div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      	<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    	</li>
+			<hr>
 
-    	<li>
-      	<div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      	<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    	</li>
+			<ul class="collapsible" data-collapsible="accordion">
 
-    	<li>
-      	<div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      	<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    	</li>
+	    	<li>
+	      	<div class="collapsible-header"><i class="material-icons">nature</i>WHAT IS HIK(E)R?</div>
+	      	<div class="collapsible-body"><p>Do you like the great outdoors? Looking for some sweet views on the trail? Made for first-time (and seasoned!) hikers of the Hudson Valley of New York, <i>Hik(e)r</i> is [blah blah blah]. </p></div>
+	    	</li>
 
-  		</ul>
+	    	<li>
+	      	<div class="collapsible-header"><i class="material-icons">nature</i>HOW DOES IT WORK?</div>
+	      	<div class="collapsible-body"><p>Using Google Maps, you can view the virtual trail map and easily target what type of hike you'd like to do. The bonus? You'll be able to choose your path visually</p></div>
+	    	</li>
 
-	</div>
+	    	<li>
+	      	<div class="collapsible-header"><i class="material-icons">nature</i>HOW DO I START?</div>
+	      	<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+	    	</li>
+
+	  		</ul>
+
+		</div>
+	</div> 
+	<!-- end row1 -->
+
+</div>
+
+<!-- 		<div class="winter-right col s4 m4">
+
+			<p>THIS IS WHERE THE MAP AND OTHER STUFF IS GONNA GO IF I EVER FIGURE THIS SHIT OUT LMAO</p>
+
+		</div> -->
+
+
+<div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Text
+            </div>
+          </div>
+        </footer>
 
 </body>
 
