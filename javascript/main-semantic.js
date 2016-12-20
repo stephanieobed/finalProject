@@ -1,16 +1,39 @@
-// Semantic 
+// Semantic
 
-$('.ui.accordion')
-  .accordion()
+$('.trigger').transition('fade left')
 ;
 
-$('.trigger.example .accordion')
-  .accordion({
-    selector: {
-      trigger: '.title .icon'
-    }
-  })
-;
+// Google Maps API + OSM layer
+
+var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.4497, lng: -73.9588},
+          zoom: 12,
+          mapTypeId: "OSM",
+          mapTypeControl: false,
+          streetViewControl: false
+        });
+
+//Define OSM map type pointing at the OpenStreetMap tile server
+            map.mapTypes.set("OSM", new google.maps.ImageMapType({
+                getTileUrl: function(coord, zoom) {
+                    // "Wrap" x (logitude) at 180th meridian properly
+                    // NB: Don't touch coord.x because coord param is by reference, and changing its x property breakes something in Google's lib 
+                    var tilesPerGlobe = 1 << zoom;
+                    var x = coord.x % tilesPerGlobe;
+                    if (x < 0) {
+                        x = tilesPerGlobe+x;
+                    }
+                    // Wrap y (latitude) in a like manner if you want to enable vertical infinite scroll
+
+                    return "http://tile.openstreetmap.org/" + zoom + "/" + x + "/" + coord.y + ".png";
+                },
+                tileSize: new google.maps.Size(256, 256),
+                name: "OpenStreetMap",
+                maxZoom: 18
+            }));
+      }
 
 // Flickr API 
 
@@ -45,7 +68,4 @@ function constructImageURL(photo) {
       "_" + photo.secret +
       "_m.jpg";
 }
-
-
-// Google Maps API
 

@@ -4,7 +4,7 @@
 <head>
 	<title>h i k e r</title>
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- material icons -->
-		<link rel="stylesheet" href="semantic/semantic.css"> <!-- semantic css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"> <!-- semantic css -->
    		<link rel="stylesheet" href="styles/styles-semantic.css"> <!-- self css -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto|Playfair+Display:400i|Raleway" rel="stylesheet"> <!-- added font -->
 
@@ -12,21 +12,16 @@
 
 <body>
 
-	<!-- js and jquery -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="semantic/semantic.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/components/accordion.js"></script>
-    <script type="text/javascript" src="javascript/main-semantic.js"></script>
-
     <!-- start content code -->
 
 <div class="ui container"> <!-- container start -->
 
 		<header class="clearfix topnav">
 	
-		 <a class="navlink">SOMETHING</a>
-		 <a class="navlink">SOMETHING</a>
-		 <a class="navlink">SOMETHING</a>
+		 <a class="navlink" href="#">HOME</a>
+		 <a class="navlink" href="#">ABOUT</a>
+		 <a class="navlink" href="#">GEOGRAPHY</a>
+		 <a class="navlink" href="#">RESOURCES</a>
 
 		</header>
 
@@ -43,26 +38,41 @@
     WHAT IS HIKER?
   </div>
   <div class="active content">
-    <p><p>Do you like the great outdoors? Looking for some sweet views on the trail? Made for first-time (and seasoned!) hikers of the Hudson Valley of New York, <i>Hik(e)r</i> is [blah blah blah]. </p></p>
+    <p><p>Do you like the great outdoors? Looking for some sweet views on the trail? Made for first-time (and seasoned!) hikers of the Hudson Valley of New York, <i>Hik(e)r</i> is a simple way to find and locate the best hikes. </p></p>
   </div>
   <div class="title">
     <i class="dropdown icon"></i>
     HOW DOES IT WORK?
   </div>
   <div class="content">
-    <p><p>Using Google Maps, you can view the virtual trail map and easily target what type of hike you'd like. If you're looking for a the best place to take in the view - for social media and with your own eyes - you'll be able to choose your path visually, courtesy of photos taken from the trail by fellow hikers. </p></p>
+    <p><p>Using Google Maps, you can view the virtual trail map and easily target what type of hike you'd like. If you're looking for the best place to take in the view - for social media and with your own eyes - you'll be able to choose your path visually, courtesy of photos taken from the trail by fellow hikers. </p></p>
   </div>
   <div class="title">
     <i class="dropdown icon"></i>
-    SOMETHING ELSE HERE
+    WHY WOULD YOU NEED THIS?
   </div>
   <div class="content">
-    <p>something else</p>
+    <p>Why wouldn't you? But rly tho. Everyone wants to do it for The Gram.</p>
   </div>
 </div>
-
 	</div> 	<!-- end hiker-info class -->
-</div>  <!-- end container2 -->
+
+		<div id="map"></div>
+
+</div>  <!-- end container -->
+
+
+<!-- API KEY: AIzaSyBJHA_c7c4hloigaZ-iiAMfrz4U2UN4zeE -->
+
+
+
+	<!-- js and jquery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script type="text/javascript" src="javascript/main-semantic.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJHA_c7c4hloigaZ-iiAMfrz4U2UN4zeE&callback=initMap"
+    async defer></script>
 
 
 </body>
