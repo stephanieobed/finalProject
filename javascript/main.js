@@ -68,11 +68,10 @@ function constructImageURL(photo) {
       "_m.jpg";
 }
 
+// Trigger/on-click event
 
-// $('.')
-
-
-
-// $('#map')
+// $('.js-wander').click(function() {
+  
+// } 
 //   .transition('fade left')
 // ;
