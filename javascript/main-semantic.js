@@ -1,6 +1,5 @@
-// Semantic
-
-$('.trigger').transition('fade left')
+$('.ui.accordion')
+  .accordion()
 ;
 
 // Google Maps API + OSM layer
@@ -8,8 +7,8 @@ $('.trigger').transition('fade left')
 var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 41.4497, lng: -73.9588},
-          zoom: 12,
+          center: {lat: 41.4498, lng: -73.9661},
+          zoom: 13,
           mapTypeId: "OSM",
           mapTypeControl: false,
           streetViewControl: false
@@ -69,3 +68,11 @@ function constructImageURL(photo) {
       "_m.jpg";
 }
 
+
+// $('.')
+
+
+
+// $('#map')
+//   .transition('fade left')
+// ;
