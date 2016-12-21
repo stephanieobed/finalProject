@@ -14,10 +14,9 @@ p {
 	letter-spacing: 2px;
 }
 
-a:active {
-	color: #ffffff;
+b {
+	font-size: 14px;
 }
-
 
 .navlink {
 	max-width: 30%;
@@ -30,7 +29,6 @@ a:active {
 	letter-spacing: 1px;
 	display: inline-block;
 	position: relative;
-	padding-bottom: 5px;
 }
 
 .navlink:after {
@@ -41,15 +39,26 @@ a:active {
 	width: 0px;
 	background: transparent;
 	transition: width .5s ease, background-color .5s ease;
+	color: #ffffff;
+}
+
+.navlink:hover {
+	color: #ffffff;
 }
 
 .navlink:hover:after {
 	width: 100%;
 	background: white;
+	color: #ffffff;
 }
 
+.navlink:active:hover {
+	color: #ffffff;
+}
 
-
+.navlink:active {
+	color: #ffffff;
+}
 
 .titleone {
 	font-family: playfair display;
@@ -76,13 +85,6 @@ a:active {
 	text-transform: uppercase;
 }
 
-/*.navlink {
-	max-width: 30%;
-	padding: 10px;
-	right: 50px;
-}
-*/
-
 .hiker-info {
 	display: inline-block;
 	height: 600px;
@@ -95,9 +97,12 @@ a:active {
        * element that contains the map. */
 #map {
 	height: 450px;
-	width: 600px;
+	width: 100%;
 	float: right;
-	top: 50px;
+	margin-top: 25px;
+	/*margin-left: -100px;*/
+	border-radius: 25px;
+	-moz-border-radius: 25px;
 }
 
 /* WITH GMAP - Optional: Makes the sample page fill the window. */
@@ -107,8 +112,20 @@ a:active {
 	padding: 0;
 */
 
-.content {
-	color: #000000;
- 	opacity: 0.7;
+.about {
+	display: inline-block;
+	height: 450px;
+	text-align: justify;
+	margin-top: 100px;
+	width: 550px;
+	overflow: auto;
 }
 
+.content {
+	color: #000000;
+}
+
+.accordion {
+	background-color: #000000;
+	opacity: 0.7;
+}
