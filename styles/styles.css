@@ -115,25 +115,25 @@ b {
 .backstory {
 	display: inline-block;
 	height: auto;
+	width: 100%;
 	text-align: justify;
 	margin-top: 100px;
-	width: 550px;
 }
 
 .about {
 	display: inline-block;
 	height: auto;
+	width: 100%;
 	text-align: justify;
 	margin-top: 100px;
-	width: 550px;
 }
 
 .resources {
 	display: inline-block;
 	height: auto;
+	width: 100%;
 	text-align: justify;
 	margin-top: 100px;
-	width: 550px;
 }
 
 .content {
