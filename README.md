@@ -21,3 +21,10 @@ From there, there would be pins dropped on the particular trail name or landmark
 
 
 ![image](http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg)
+
+## To Do (as of 12/20/16)
+1. Wrap right info class (map area) for event clicks (display: none; hidden, etc)
+2. Link trigger event and Transition from Semantic to navigation bar
+3. Flickr API integration
+4. Fill in navigation content [easy] 
+4. Other small stylings: footer, finish nav styling [easy]

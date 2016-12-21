@@ -6,11 +6,6 @@ body {
  	background-size: cover;
 }
 
-html {
-	background: url('../assets/forest.jpg') no-repeat center center fixed;
- 	background-size: cover;
-}
-
 p {
 	line-height: 120%;
 	font-family: raleway;
@@ -19,20 +14,57 @@ p {
 	letter-spacing: 2px;
 }
 
-a {
+b {
+	font-size: 14px;
+}
+
+.navlink {
+	max-width: 30%;
+	padding: 10px;
+	right: 50px;
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 500;
 	font-size: 16px;
 	letter-spacing: 1px;
-	padding-bottom: 5px;
+	display: inline-block;
+	position: relative;
+}
+
+.navlink:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 1px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+	color: #ffffff;
+}
+
+.navlink:hover {
+	color: #ffffff;
+}
+
+.navlink:hover:after {
+	width: 100%;
+	background: white;
+	color: #ffffff;
+}
+
+.navlink:active:hover {
+	color: #ffffff;
+}
+
+.navlink:active {
+	color: #ffffff;
 }
 
 .titleone {
-	font-family: playfair display;
-	letter-spacing: 1px;
+	font-family: open sans;
+	letter-spacing: 2px;
 	font-weight: 200;
-	font-size: 50px;
+	font-size: 60px;
 }
 
 .clearfix:after {
@@ -43,6 +75,7 @@ a {
 
 .topnav {
 	color: #ffffff;
+	margin-top: 10px;
 	padding: 20px;
 	max-width: 100%;
 	height: 20px;
@@ -52,104 +85,63 @@ a {
 	text-transform: uppercase;
 }
 
-span.navlink {
-	max-width: 30%;
-	padding: 10px;
-	right: 50px;
-}
-
-.menuicon {
-	width: 50px;
-	height: 50px;
-	background: #ffffff;
-	color: #000000;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-}
-
-span.amp {
-	font-family: Baskerville, Palatino, "Book Antiqua", serif;
-	font-style: italic;
-	font-size: 80px;
-	padding: 50px;
+.hiker-info {
 	display: inline-block;
-  }
-
-
-/*.fall {
-	width: 200px;
-	height: auto;
-	padding: 20px;
-	font-size: : 45px;
-}*/
-
-.winter {
-	margin-top: 100px;
-	height: auto;
+	height: 600px;
 	text-align: justify;
+	margin-top: 100px;
+	width: 350px;
 }
 
-.winter-right {
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+	height: 450px;
+	width: 100%;
 	float: right;
-	margin-top: 100px;
-	margin-left: -50px;
-	width: 300px;
-	height: auto;
-	padding: 20px;
-	text-align: justify;
-
+	margin-top: 25px;
+	/*margin-left: -100px;*/
+	border-radius: 25px;
+	-moz-border-radius: 25px;
 }
 
-
-.collapsible {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    margin: 0.5rem 0 1rem 0;
-    color: #000000;
- }
-
- .collapsible-header {
- 	background-color: #ffffff;
- 	opacity: 0.7;
- }
-
- .collapsible-body {
- 	background-color: #ffffff;
- }
-
- .map {
- 	float: right;
-	margin-top: 100px;
-	max-width: 500px;
-	height: auto;
-	padding: 20px;
-	text-align: justify;
- }
-
-/*
-.imgcont1 {
-	vertical-align: top;
-	top: 200px;
-	background-image: url('../assets/forest.jpg');
-	min-width: 30%;
-	height: 500px; 
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
+/* WITH GMAP - Optional: Makes the sample page fill the window. */
+/*html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
 */
 
-/*.firstcontent {
-	width: 450px;
-	height: 300px;
-	padding: 50px;
-	overflow: auto;
-	box-sizing: border-box;
-	border: 3px double #ffffff;
+.backstory {
+	display: inline-block;
+	height: auto;
 	text-align: justify;
-	color: #ffffff;
+	margin-top: 100px;
+	width: 550px;
 }
-*/
+
+.about {
+	display: inline-block;
+	height: auto;
+	text-align: justify;
+	margin-top: 100px;
+	width: 550px;
+}
+
+.resources {
+	display: inline-block;
+	height: auto;
+	text-align: justify;
+	margin-top: 100px;
+	width: 550px;
+}
+
+.content {
+	color: #000000;
+}
+
+.accordion {
+	color: #000000;
+	opacity: 0.7;
+}
+
