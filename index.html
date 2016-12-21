@@ -14,51 +14,75 @@
 
     <!-- start content code -->
 
-<div class="ui container"> <!-- container start -->
+<div class="ui container"> <!-- container1 start -->
 
 		<header class="clearfix topnav">
 	
 		 <a class="navlink" href="#">HOME</a>
 		 <a class="navlink" href="#">ABOUT</a>
-		 <a class="navlink" href="#">GEOGRAPHY</a>
+		 <a class="navlink js-wander" href="#">GEOGRAPHY</a>
 		 <a class="navlink" href="#">RESOURCES</a>
 
 		</header>
+</div> 
 
-	<div class="hiker-info">
-		<h1 class="titleone">hik(e)r. [n]</h1>
+	<div class="ui grid container"> <!-- container2 start -->
+			<div class="one wide column"></div>
+			<div class="six wide column">
 
-		<p>a person who walks or marches a great distance for pleasure, exercise, or the like.</p>
+				<h1 class="titleone">hik(e)r. [n]</h1>
 
-		<hr>
+				<p>a person who walks or marches a great distance for pleasure, exercise, or the like.</p>
 
-		<div class="ui styled fluid accordion">
-  <div class="active title">
-    <i class="dropdown icon"></i>
-    WHAT IS HIKER?
-  </div>
-  <div class="active content">
-    <p><p>Do you like the great outdoors? Looking for some sweet views on the trail? Made for first-time (and seasoned!) hikers of the Hudson Valley of New York, <i>Hik(e)r</i> is a simple way to find and locate the best hikes. </p></p>
-  </div>
-  <div class="title">
-    <i class="dropdown icon"></i>
-    HOW DOES IT WORK?
-  </div>
-  <div class="content">
-    <p><p>Using Google Maps, you can view the virtual trail map and easily target what type of hike you'd like. If you're looking for the best place to take in the view - for social media and with your own eyes - you'll be able to choose your path visually, courtesy of photos taken from the trail by fellow hikers. </p></p>
-  </div>
-  <div class="title">
-    <i class="dropdown icon"></i>
-    WHY WOULD YOU NEED THIS?
-  </div>
-  <div class="content">
-    <p>Why wouldn't you? But rly tho. Everyone wants to do it for The Gram.</p>
-  </div>
-</div>
-	</div> 	<!-- end hiker-info class -->
+				<hr>
 
-		<div id="map"></div>
+				<div class="ui styled fluid accordion">
+				  <div class="active title">
+				    <i class="dropdown icon"></i>
+				    WHAT IS HIKER?
+				  </div>
+				  <div class="active content">
+				    <p><p>Do you like the great outdoors? Looking for some sweet views on the trail? Made for first-time (and seasoned!) hikers of the Hudson Valley of New York, <i>Hik(e)r</i> is a simple way to find and locate the best hikes. </p></p>
+				  </div>
+				  <div class="title">
+				    <i class="dropdown icon"></i>
+				    HOW DOES IT WORK?
+				  </div>
+				  <div class="content">
+				    <p><p>Using Google Maps, you can view the virtual trail map and easily target what type of hike you'd like. If you're looking for the best place to take in the view - for social media and with your own eyes - you'll be able to choose your path visually, courtesy of photos taken from the trail by fellow hikers. </p></p>
+				  </div>
+				  <div class="title">
+				    <i class="dropdown icon"></i>
+				    WHY WOULD YOU NEED THIS?
+				  </div>
+				  <div class="content">
+				    <p>Why wouldn't you? But rly tho. Everyone wants to do it for The Gram.</p>
+				  </div>
+				</div>
 
+			</div><!-- end six wide column -->
+			<div class="one wide column"></div>
+			
+			<!-- start info columns - 8 wide -->
+			<div class="eight wide column">
+
+				<div id="map"></div>
+
+				<div class="about">
+
+				<!-- ABOUT -->
+				<p>When a lot of people hear the word "hiking," 90% of the time the first thing that comes to mind is a nice leisurely walk in the woods. That's the extent of it.</p>
+
+				<p><b>That isn't real hiking.</b></p>
+
+				<p>My first <b>REAL</b> hike was in November 2013. My new boyfriend at the time had conned me into going, even if it was supposed to be a little chilly out that day we had planned for it. Disregarding the weather and lured under the same thought I described above, plus the premise that it would be simple and relaxing, I was not even close to prepared for what was going to happen. The hike was at Breakneck Ridge - which is appropriately named, considering that you have to scramble (aka rock climb, for those who don't know) up a huge mountain for what feels like eternity before it gets easier. </p>
+
+				<p>(more backstory no one cares about here)</p>
+				</div> <!--  end about -->
+
+			</div>	<!-- end 8 wide -->
+			
+		</div>
 </div>  <!-- end container -->
 
 
@@ -69,10 +93,12 @@
 	<!-- js and jquery -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js"></script>
-    <script type="text/javascript" src="javascript/main-semantic.js"></script>
+
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJHA_c7c4hloigaZ-iiAMfrz4U2UN4zeE&callback=initMap"
     async defer></script>
+
+       <script type="text/javascript" src="javascript/main-semantic.js"></script>
 
 
 </body>
