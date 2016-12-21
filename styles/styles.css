@@ -61,10 +61,10 @@ b {
 }
 
 .titleone {
-	font-family: playfair display;
-	letter-spacing: 1px;
+	font-family: open sans;
+	letter-spacing: 2px;
 	font-weight: 200;
-	font-size: 50px;
+	font-size: 60px;
 }
 
 .clearfix:after {
@@ -112,13 +112,28 @@ b {
 	padding: 0;
 */
 
-.about {
+.backstory {
 	display: inline-block;
-	height: 450px;
+	height: auto;
 	text-align: justify;
 	margin-top: 100px;
 	width: 550px;
-	overflow: auto;
+}
+
+.about {
+	display: inline-block;
+	height: auto;
+	text-align: justify;
+	margin-top: 100px;
+	width: 550px;
+}
+
+.resources {
+	display: inline-block;
+	height: auto;
+	text-align: justify;
+	margin-top: 100px;
+	width: 550px;
 }
 
 .content {
@@ -126,6 +141,7 @@ b {
 }
 
 .accordion {
-	background-color: #000000;
+	color: #000000;
 	opacity: 0.7;
 }
+
