@@ -6,7 +6,7 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0;'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"> <!-- semantic css -->
    		<link rel="stylesheet" href="styles/styles.css"> <!-- self css -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto|Satisfy|Open+Sans|Raleway" rel="stylesheet"> <!-- added font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Oswald|Open+Sans|Raleway" rel="stylesheet"> <!-- added font -->
 
 </head>
 
@@ -22,7 +22,7 @@
 		 <a class="navlink js-nav" href="#" data-target="js-about">ABOUT</a>
 		 <a class="navlink js-nav" href="#" data-target="js-backstory">BACKGROUND</a>
 		 <a class="navlink js-nav" href="#" data-target="js-map">MAP</a>
-		 <a class="navlink js-nav" href="#" data-target="js-resources">SOURCES</a>
+		 <a class="navlink js-nav" href="#" data-target="js-credits">CREDITS</a>
 
 		</header>
 </div> <!-- container end -->
@@ -31,7 +31,7 @@
 			<div class="one wide column"></div>
 			<div class="six wide column">
 
-				<h1 class="titleone">hiker</h1>
+				<h1 class="title-one">hiker.</h1>
 				<p><b>noun.</b> a person who walks or marches a great distance for pleasure, exercise, or the like.</p>
 
 				<hr>
@@ -66,7 +66,19 @@
 				<!-- about/how it works -->
 				<div class="js-about about page-section js-page-section">
 
-				<p>details on how it works here.</p>
+				<p>By using both Google Maps and Open Street Maps API, you have the best of both worlds. Google provides the standard base layer of the map, and the additional Open Street map layer provides the trails (marked as a small dashed red line) along with the different color routes you may take upon your hike. There are also summit/peak markers on the map, to reflect any climbs and mountains along or around the area. Green areas are forests, marked by the tree icons along the map. 
+
+				<br><br>
+
+				The second part of this project provides images taken by those who have hiked the area before you. Using the Flickr API, the map pulls photos from public feeds, and via geo-tag, plots points along the map corresponding to where the photo was taken. Thus, this provides you with a general idea with what scenery you can expect to see while you're out there on the trail.
+
+				<h2 class="heading-one">Current: Version 1.0</h2>
+
+				<p>Focusing on certain parts of the Hudson Valley, you can trigger the viewfinder by clicking the buttons below the map. These locations are hard-coded for the demo version of this project, and only pick up photos from certain groups via Flickr API that may or not be recent. Photos may also be tagged from other locations based on where their lat/long was when the upload occured. </p>
+
+				<h2 class="heading-one">Future: Version 2.0</h2>
+
+				<p>The scop will broaden to other areas that aren't limited to the Hudson Valley area or New York State. Upon changing locations via movement of the center point of the map, images from that location will be pulled via the API and be accessible.</p>
 
 				</div>	<!-- end about -->
 
@@ -75,11 +87,15 @@
 
 				<p>When a lot of people hear the word "hiking," 90% of the time the first thing that comes to mind is a nice leisurely walk in the woods. That's the extent of it.</p>
 
-				<p><b>That isn't real hiking.</b></p>
+				<p><b>That, my friends, isn't real hiking.</b></p>
 
-				<p>My first <b>REAL</b> hike was in November 2013. My new boyfriend at the time had conned me into going, even if it was supposed to be a little chilly out that day we had planned for it. Disregarding the weather and lured under the same thought I described above, plus the premise that it would be simple and relaxing, I was not even close to prepared for what was going to happen. The hike was at Breakneck Ridge - which is appropriately named, considering that you have to scramble (aka rock climb, for those who don't know) up a huge mountain for what feels like eternity before it gets easier. </p>
+				<p>My first <b>REAL</b> hike was in November 2013. Full disclosure: I was conned into doing it. Disregarding the forecasted chilly weather and lured under the same thought I described above - plus the premise that it would be simple and relaxing - I was not even close to prepared for what was going to happen. The hike was at Breakneck Ridge - which is appropriately named, considering that you have to scramble (aka rock climb, for those who don't know) up a huge mountain for what feels like eternity before it gets even the slightest bit easier, even though it's one of the most difficult hikes in the Hudson Valley. In hindsight, I wasn't prepared or ready, and I should have done some more research before embarking.</p>
 
-				<p>(more backstory no one cares about here)</p>
+				<p>I hiked the Breakneck area two more times after the intial trek, the most recent being a few months ago after not touching it for a year. And despite knowing what was in store, I still felt like it was the first time all over again. The trail has gotten much more popular in the last few years, and it's hard to have a quiet time to just concentrate on your ascent up the steep beds of rock. On the way up, I remember talking to and encouraging a few people who were clearly first timers. Most of them didn't know what they were getting into, and that's part of what inspired this project. <p>
+
+				<p><i>(...that, and scrolling through my own Instagram feed and thinking about how much nature stuff is on there.)</i></p>
+
+				<p>It takes endurance and a lot of skill in order to complete any part of that hike, whether you take the shortcut trails or do a full loop that takes up most of your day. Before you go out on any trail, it's best that you do your research and have a clear idea of where you're going. Preparing is half the battle, and that's why this project exists. Because people are always looking to take wonderful photos of where they are, for memories or to show others what they're doing (whether it really looks that easy or not), <b>Hiker</b> is part map and part photo view-finder. The Hudson Valley is a vast beauty in itself when you pick the right time of year, when the leaves change as well when everything is in full foiliage, and I hope this helps you to figure out your trails (and Insta-worthy shots).</p>
 
 				</div> <!--  end backstory -->
 
@@ -87,15 +103,40 @@
 				<!-- map -->
 				<div class="js-map map page-section js-page-section">
 					<div id="map"></div>
-					<button class="js-btn-map" data-id="1674303@N22">Breakneck Ridge</button>
-					<button class="js-btn-map" data-id="802073@N23">Harriman State Park</button>
+					
+					<div class="button-container">
+
+						<button class="js-btn-map ui-button" data-id="1674303@N22">Breakneck Ridge</button>
+						<button class="js-btn-map ui-button" data-id="802073@N23">Harriman State Park</button>
+						<button class="js-btn-map ui-button" data-id="837707@N24">Minnewaska Preserve</button>
+						<button class="js-btn-map ui-button" data-id="2258241@N20">Mt. Beacon</button>
+
+						<h2 class="heading-two">( CLICK ANY OF THE BUTTONS ABOVE TO GO ELSEWHERE )</h2>
+
+					</div>
+
 				</div>
 
-				<!-- resources -->
-				<div class="js-resources resources page-section js-page-section">
-				<p>(links and resources to build this site + hiking links)</p>
+				<!-- credits -->
+				<div class="js-credits credits page-section js-page-section">
+
+					<p><b>Hiker</b> is product of <a href="https://generalassemb.ly/">General Assembly</a>'s Front-End Web Development 11/3/16 session. It was a short AF. (GUYS WE MADE IT!) 
+
+					<br><br>
+
+					<b>Built by</b> Stephanie Obed using Semantic and APIs by Google Maps, Open Street Maps, and Flickr. 
+
+					<br><br>
+
+					<b>Special thanks</b> to Taq Karim for being a bomb instructor and helping me figure shit out, and Pete Avila for all the encouragement during office hours.
+
+					<br><br>
+
+					<b>To find out</b> more about Hudson Valley hikes, visit <a href="http://hikethehudsonvalley.com/the-hikes/">this link</a>. </p>
+
+
 				</div>
-				<!-- end resources -->
+				<!-- end credits -->
 
 			</div>	<!-- end 8 wide -->
 			
