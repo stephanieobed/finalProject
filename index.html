@@ -2,7 +2,8 @@
 <html>
 
 <head>
-	<title>h i k e r</title>
+		<title>h i k e r</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0;'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css"> <!-- semantic css -->
    		<link rel="stylesheet" href="styles/styles.css"> <!-- self css -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto|Satisfy|Open+Sans|Raleway" rel="stylesheet"> <!-- added font -->
@@ -17,11 +18,11 @@
 
 		<header class="clearfix topnav">
 	
-		 <a class="navlink" href="#">HOME</a>
-		 <a class="navlink" href="#">ABOUT</a>
-		 <a class="navlink" href="#">FAQ</a>
-		 <a class="navlink js-wander" href="#">GEOGRAPHY</a>
-		 <a class="navlink" href="#">RESOURCES</a>
+		 <a class="navlink js-nav" href="#">HOME</a>
+		 <a class="navlink js-nav" href="#" data-target="js-about">ABOUT</a>
+		 <a class="navlink js-nav" href="#" data-target="js-backstory">BACKGROUND</a>
+		 <a class="navlink js-nav" href="#" data-target="js-map">MAP</a>
+		 <a class="navlink js-nav" href="#" data-target="js-resources">SOURCES</a>
 
 		</header>
 </div> <!-- container end -->
@@ -31,7 +32,6 @@
 			<div class="six wide column">
 
 				<h1 class="titleone">hiker</h1>
-
 				<p><b>noun.</b> a person who walks or marches a great distance for pleasure, exercise, or the like.</p>
 
 				<hr>
@@ -64,14 +64,14 @@
 			<div class="eight wide column">
 
 				<!-- about/how it works -->
-				<div class="about">
+				<div class="js-about about page-section js-page-section">
 
 				<p>details on how it works here.</p>
 
 				</div>	<!-- end about -->
 
 				<!-- backstory -->
-				<div class="backstory">
+				<div class="js-backstory backstory page-section js-page-section">
 
 				<p>When a lot of people hear the word "hiking," 90% of the time the first thing that comes to mind is a nice leisurely walk in the woods. That's the extent of it.</p>
 
@@ -85,10 +85,14 @@
 
 
 				<!-- map -->
-				<div id="map"></div>
+				<div class="js-map map page-section js-page-section">
+					<div id="map"></div>
+					<button class="js-btn-map" data-id="1674303@N22">Breakneck Ridge</button>
+					<button class="js-btn-map" data-id="802073@N23">Harriman State Park</button>
+				</div>
 
 				<!-- resources -->
-				<div class="resources">
+				<div class="js-resources resources page-section js-page-section">
 				<p>(links and resources to build this site + hiking links)</p>
 				</div>
 				<!-- end resources -->
@@ -97,7 +101,6 @@
 			
 		</div> <!-- end grid ccontainer -->
 
-	<div class=""
 </div>  
 
 

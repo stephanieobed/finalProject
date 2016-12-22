@@ -5,7 +5,7 @@ $('.ui.accordion')
 // Google Maps API + OSM layer
 
 var map;
-      function initMap() {
+      function initMap(gId = '1674303@N22') {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 41.4498, lng: -73.9661},
           zoom: 13,
@@ -13,6 +13,11 @@ var map;
           mapTypeControl: false,
           streetViewControl: false
         });
+
+        var georssLayer = new google.maps.KmlLayer({
+          url: 'http://api.flickr.com/services/feeds/geo/?g='+ gId +'&lang=en-us&format=feed-georss'
+        });
+        georssLayer.setMap(map);
 
 //Define OSM map type pointing at the OpenStreetMap tile server
             map.mapTypes.set("OSM", new google.maps.ImageMapType({
@@ -34,30 +39,41 @@ var map;
             }));
       }
 
+
+
+const btnMap = $('.js-btn-map');
+
+btnMap.click(onMapBtnClick);
+
+function onMapBtnClick(e) {
+  const currentElement = $(this);
+  const gId = currentElement.attr('data-id');
+
+  initMap(gId)
+  // console.log()
+
+}
+
 // Flickr API 
 
-var req = new XMLHttpRequest();
-req.open(
-    "GET",
-    "https://api.flickr.com/services/rest/?" +
-        "method=flickr.photos.search&" +
-        "api_key=75f73b938c8b88fce741814c87fd6465&" +
-        "text=forest&hudson-valley&hiking" +
-        "safe_search=1&" +  // 1 is "safe"
-        "content_type=1&" +  // 1 is "photos only"
-        "sort=relevance&" +  // another good one is "interestingness-desc"
-        "per_page=20&format=json",
-    true);
-req.onload = showPhotos;
-req.send(null);
+$.ajax({
+  url: 'https://api.flickr.com/services/rest/', 
+  data: {
+    method: 'flickr.photos.search',
+    api_key: '75f73b938c8b88fce741814c87fd6465',
+    text: 'forest',
+    safe_search: '1',
+    content_type: '1',
+    sort: 'relevance',
+    per_page: '20',
+    format: 'json',
+  },
+  method: 'GET',
+  dataType: 'jsonp',
+});
 
-function showPhotos(data) {
-    console.log(this.responseText)
-//   var photos = req.responseXML.getElementsByTagName("photo");
-//   console.log(data)
-//   for (var i = 0, photo; photo = photos[i]; i++) {
-//       console.log(photo)
-//   }
+function jsonFlickrApi(data) {
+  console.log(data)
 }
 
 function constructImageURL(photo) {
@@ -68,10 +84,25 @@ function constructImageURL(photo) {
       "_m.jpg";
 }
 
+
+
 // Trigger/on-click event
 
-// $('.js-wander').click(function() {
-  
-// } 
-//   .transition('fade left')
-// ;
+const search = $('.js-nav');
+
+search.click(onClick);
+
+function onClick(e) {
+  const currentElement = $(this);
+  const selector = currentElement.attr('data-target');
+  $('.js-page-section').transition('hide');
+  // setTimeout(function() {
+  const itemToShow = $('.'+selector).transition('fade up');
+  if (selector === 'js-map') {
+    initMap()
+  }
+
+  console.log(selector)
+  // console.log()
+
+}
