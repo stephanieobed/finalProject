@@ -17,10 +17,12 @@ From there, there would be pins dropped on the particular trail name or landmark
 2. [Google Maps API](https://developers.google.com/maps/documentation/javascript/examples/map-simple)
 
 ## Screenshots
-(upload an image of your layout to this repo then link to it here)
+Main Page
+![image](http://i.imgur.com/NZWgFNU.jpg)
 
-
-![image](http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg)
+Maps Views
+![image](http://i.imgur.com/yAj356f.jpg)
+![image](http://i.imgur.com/kMhqPXt.png)
 
 ## To Do (as of 12/20/16)
 1. Wrap right info class (map area) for event clicks (display: none; hidden, etc)
