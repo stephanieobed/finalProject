@@ -8,7 +8,7 @@ This is a final project for General Assembly's Front End Web Development course 
 
 ## How this will work
 
-On the index page, there will be a button underneath the left-hand info column that serves as the initial start of the process. This will trigger an event that will load the map in through the right side of the page, and can also be accessed via one of the links at the top navigation, should the user see fit to use that instead. 
+On the index page, the left-hand info column and accordion serves as the initial start of the process. This will trigger an event that will load the map in through the right side of the page, and can also be accessed via one of the links at the top navigation, should the user see fit to use that instead. 
 
 Upon load of the map, the user can move to a particular area (for this project, I was trying to focus more on the NY State hiking trails in the Hudson Valley) by clicking and zooming in on the map interface. Ideally, the trail names/routes would be viewable on the map itself. 
 
