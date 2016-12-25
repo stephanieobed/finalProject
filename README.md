@@ -2,6 +2,10 @@
 
 This site, tentatively called Hiker (with or without the E), will allow a user to browse a google map and view scenery from the relevant locations, in order to aid hike selection for optimal nature views...and the photography posts that come with it.
 
+This is a final project for General Assembly's Front End Web Development course in NYC (11/3 to 12/22/16). 
+
+[ Click here to see the final site! ](https://stephanieobed.github.io/finalProject/index.html)
+
 ## How this will work
 
 On the index page, there will be a button underneath the left-hand info column that serves as the initial start of the process. This will trigger an event that will load the map in through the right side of the page, and can also be accessed via one of the links at the top navigation, should the user see fit to use that instead. 
@@ -17,10 +21,12 @@ From there, there would be pins dropped on the particular trail name or landmark
 2. [Google Maps API](https://developers.google.com/maps/documentation/javascript/examples/map-simple)
 
 ## Screenshots
-(upload an image of your layout to this repo then link to it here)
+Main Page
+![image](http://i.imgur.com/NZWgFNU.jpg)
 
-
-![image](http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg)
+Maps Views
+![image](http://i.imgur.com/yAj356f.jpg)
+![image](http://i.imgur.com/kMhqPXt.png)
 
 ## To Do (as of 12/20/16)
 1. Wrap right info class (map area) for event clicks (display: none; hidden, etc)
